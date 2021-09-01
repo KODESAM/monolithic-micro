@@ -1,0 +1,1088 @@
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-09-01T20:01:57Z"
+    generateName: frontend-77d556db49-
+    labels:
+      app: frontend
+      pod-template-hash: 77d556db49
+    name: frontend-77d556db49-vfgf5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: frontend-77d556db49
+      uid: dcb0d0f9-c39b-48c1-b6ce-77058d691948
+    resourceVersion: "7338"
+    uid: 5a5a94d4-5c0d-4803-8dff-7d712335cd79
+  spec:
+    containers:
+    - image: gcr.io/qwiklabs-gcp-01-64f200010379/frontend:1.0.0
+      imagePullPolicy: IfNotPresent
+      name: frontend
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-z87b2
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-fancy-cluster-default-pool-f09ecfc4-hwn7
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-z87b2
+      secret:
+        defaultMode: 420
+        secretName: default-token-z87b2
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:01:57Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:02:00Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:02:00Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:01:57Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://e4a816043067f6e054472077c92dbe30733e0b1d00f6a76157568fd73bd8e5e9
+      image: gcr.io/qwiklabs-gcp-01-64f200010379/frontend:1.0.0
+      imageID: gcr.io/qwiklabs-gcp-01-64f200010379/frontend@sha256:a1bb0c511317773bd0ea9b9a2ef4d5ebc6697c9c5bd8002f4e8afb20b0a87a26
+      lastState: {}
+      name: frontend
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-09-01T20:02:00Z"
+    hostIP: 10.128.0.2
+    phase: Running
+    podIP: 10.16.2.5
+    podIPs:
+    - ip: 10.16.2.5
+    qosClass: BestEffort
+    startTime: "2021-09-01T20:01:57Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-09-01T19:59:45Z"
+    generateName: monolith-bd6479b7-
+    labels:
+      app: monolith
+      pod-template-hash: bd6479b7
+    name: monolith-bd6479b7-cmb77
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: monolith-bd6479b7
+      uid: 82095f68-3986-47a5-b6cd-fff0582cecd8
+    resourceVersion: "6763"
+    uid: 594a7863-b2b3-4529-a70b-ba413e21321c
+  spec:
+    containers:
+    - image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:3.0.0
+      imagePullPolicy: IfNotPresent
+      name: monolith
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-z87b2
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-fancy-cluster-default-pool-f09ecfc4-m2z0
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-z87b2
+      secret:
+        defaultMode: 420
+        secretName: default-token-z87b2
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:59:45Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:00:09Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T20:00:09Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:59:45Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://5ef32cda9310b26d702e339b7db46346d018837c72b916354cb2e869a75ce4ee
+      image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:3.0.0
+      imageID: gcr.io/qwiklabs-gcp-01-64f200010379/monolith@sha256:a328c7bb3b445637c54a8c84cd052cdb85e24c7b7c44422b9b6af028af4eb5e5
+      lastState: {}
+      name: monolith
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-09-01T20:00:08Z"
+    hostIP: 10.128.0.3
+    phase: Running
+    podIP: 10.16.0.5
+    podIPs:
+    - ip: 10.16.0.5
+    qosClass: BestEffort
+    startTime: "2021-09-01T19:59:45Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-09-01T19:47:54Z"
+    generateName: orders-785878bbf6-
+    labels:
+      app: orders
+      pod-template-hash: 785878bbf6
+    name: orders-785878bbf6-zsf8d
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: orders-785878bbf6
+      uid: 6babbaf7-40fc-4d14-a984-fed53cef0480
+    resourceVersion: "3044"
+    uid: ef9a823a-9092-456a-8956-e17533777014
+  spec:
+    containers:
+    - image: gcr.io/qwiklabs-gcp-01-64f200010379/orders:1.0.0
+      imagePullPolicy: IfNotPresent
+      name: orders
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-z87b2
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-fancy-cluster-default-pool-f09ecfc4-sq3q
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-z87b2
+      secret:
+        defaultMode: 420
+        secretName: default-token-z87b2
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:47:54Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:47:57Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:47:57Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:47:54Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://8decf342c1686b42a67585ee102b60797ddfc88f05faaa1358d2e9f89e991123
+      image: gcr.io/qwiklabs-gcp-01-64f200010379/orders:1.0.0
+      imageID: gcr.io/qwiklabs-gcp-01-64f200010379/orders@sha256:0d7a9bcc746884ae318efa4c0381e6636937b0682c9407f424ad372d8473c9a7
+      lastState: {}
+      name: orders
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-09-01T19:47:56Z"
+    hostIP: 10.128.0.4
+    phase: Running
+    podIP: 10.16.1.8
+    podIPs:
+    - ip: 10.16.1.8
+    qosClass: BestEffort
+    startTime: "2021-09-01T19:47:54Z"
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    creationTimestamp: "2021-09-01T19:55:21Z"
+    generateName: products-7b794f7965-
+    labels:
+      app: products
+      pod-template-hash: 7b794f7965
+    name: products-7b794f7965-vzk4t
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: products-7b794f7965
+      uid: 889eb630-570f-415a-bbb2-bc3c357a240c
+    resourceVersion: "5346"
+    uid: 88b6c3c3-0cb2-4821-a1f7-a3958a049dd2
+  spec:
+    containers:
+    - image: gcr.io/qwiklabs-gcp-01-64f200010379/products:1.0.0
+      imagePullPolicy: IfNotPresent
+      name: products
+      resources: {}
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: File
+      volumeMounts:
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: default-token-z87b2
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: gke-fancy-cluster-default-pool-f09ecfc4-sq3q
+    preemptionPolicy: PreemptLowerPriority
+    priority: 0
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext: {}
+    serviceAccount: default
+    serviceAccountName: default
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 300
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 300
+    volumes:
+    - name: default-token-z87b2
+      secret:
+        defaultMode: 420
+        secretName: default-token-z87b2
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:55:21Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:55:24Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:55:24Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2021-09-01T19:55:21Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: containerd://9f7ba3ef92703efa454735a5f3b27a22b998f3e028d1477090a5cd337046dfb3
+      image: gcr.io/qwiklabs-gcp-01-64f200010379/products:1.0.0
+      imageID: gcr.io/qwiklabs-gcp-01-64f200010379/products@sha256:2cb4bd4916676a41b29c9bf9ff5fc12865383e0f4a7455a69712a6e10c7102ed
+      lastState: {}
+      name: products
+      ready: true
+      restartCount: 0
+      started: true
+      state:
+        running:
+          startedAt: "2021-09-01T19:55:23Z"
+    hostIP: 10.128.0.4
+    phase: Running
+    podIP: 10.16.1.9
+    podIPs:
+    - ip: 10.16.1.9
+    qosClass: BestEffort
+    startTime: "2021-09-01T19:55:21Z"
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-09-01T20:02:08Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: frontend
+    name: frontend
+    namespace: default
+    resourceVersion: "7643"
+    uid: 4779aa65-34dd-4214-b161-14dc27276b19
+  spec:
+    clusterIP: 10.19.249.124
+    clusterIPs:
+    - 10.19.249.124
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 30475
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: frontend
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.69.135.29
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-09-01T19:41:30Z"
+    labels:
+      component: apiserver
+      provider: kubernetes
+    name: kubernetes
+    namespace: default
+    resourceVersion: "201"
+    uid: ceafc4e5-84ff-4da7-a640-832a40eca4d8
+  spec:
+    clusterIP: 10.19.240.1
+    clusterIPs:
+    - 10.19.240.1
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 443
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-09-01T19:45:42Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: monolith
+    name: monolith
+    namespace: default
+    resourceVersion: "2510"
+    uid: 6f398266-340e-49be-886b-bc30a5c66285
+  spec:
+    clusterIP: 10.19.249.143
+    clusterIPs:
+    - 10.19.249.143
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 32767
+      port: 80
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app: monolith
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 35.224.27.213
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-09-01T19:48:20Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: orders
+    name: orders
+    namespace: default
+    resourceVersion: "3362"
+    uid: a97555eb-3ef1-4f90-9577-b8d4a1995874
+  spec:
+    clusterIP: 10.19.243.41
+    clusterIPs:
+    - 10.19.243.41
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 32465
+      port: 80
+      protocol: TCP
+      targetPort: 8081
+    selector:
+      app: orders
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.136.6.221
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2021-09-01T19:55:46Z"
+    finalizers:
+    - service.kubernetes.io/load-balancer-cleanup
+    labels:
+      app: products
+    name: products
+    namespace: default
+    resourceVersion: "5669"
+    uid: bb850fdd-e58f-4c12-a67d-1c9e12732552
+  spec:
+    clusterIP: 10.19.254.17
+    clusterIPs:
+    - 10.19.254.17
+    externalTrafficPolicy: Cluster
+    ports:
+    - nodePort: 31195
+      port: 80
+      protocol: TCP
+      targetPort: 8082
+    selector:
+      app: products
+    sessionAffinity: None
+    type: LoadBalancer
+  status:
+    loadBalancer:
+      ingress:
+      - ip: 34.134.242.199
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T20:01:57Z"
+    generation: 1
+    labels:
+      app: frontend
+    name: frontend
+    namespace: default
+    resourceVersion: "7340"
+    uid: d1776cda-380c-489c-956d-572394e6ee80
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: frontend
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: frontend
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/frontend:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: frontend
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-09-01T20:02:00Z"
+      lastUpdateTime: "2021-09-01T20:02:00Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-09-01T20:01:57Z"
+      lastUpdateTime: "2021-09-01T20:02:00Z"
+      message: ReplicaSet "frontend-77d556db49" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "3"
+    creationTimestamp: "2021-09-01T19:45:41Z"
+    generation: 3
+    labels:
+      app: monolith
+    name: monolith
+    namespace: default
+    resourceVersion: "6774"
+    uid: db29ad60-0f1f-4de2-bc5f-0ef366844a11
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: monolith
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: monolith
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:3.0.0
+          imagePullPolicy: IfNotPresent
+          name: monolith
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-09-01T19:46:05Z"
+      lastUpdateTime: "2021-09-01T19:46:05Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-09-01T19:45:41Z"
+      lastUpdateTime: "2021-09-01T20:00:09Z"
+      message: ReplicaSet "monolith-bd6479b7" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 3
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T19:47:54Z"
+    generation: 1
+    labels:
+      app: orders
+    name: orders
+    namespace: default
+    resourceVersion: "3046"
+    uid: 8577e10e-35bb-4380-9f1d-36dc63cb669f
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: orders
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: orders
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/orders:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: orders
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-09-01T19:47:57Z"
+      lastUpdateTime: "2021-09-01T19:47:57Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-09-01T19:47:54Z"
+      lastUpdateTime: "2021-09-01T19:47:57Z"
+      message: ReplicaSet "orders-785878bbf6" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: Deployment
+  metadata:
+    annotations:
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T19:55:21Z"
+    generation: 1
+    labels:
+      app: products
+    name: products
+    namespace: default
+    resourceVersion: "5349"
+    uid: 98fb65dc-9738-4609-996d-851af06128c8
+  spec:
+    progressDeadlineSeconds: 600
+    replicas: 1
+    revisionHistoryLimit: 10
+    selector:
+      matchLabels:
+        app: products
+    strategy:
+      rollingUpdate:
+        maxSurge: 25%
+        maxUnavailable: 25%
+      type: RollingUpdate
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: products
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/products:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: products
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    conditions:
+    - lastTransitionTime: "2021-09-01T19:55:24Z"
+      lastUpdateTime: "2021-09-01T19:55:24Z"
+      message: Deployment has minimum availability.
+      reason: MinimumReplicasAvailable
+      status: "True"
+      type: Available
+    - lastTransitionTime: "2021-09-01T19:55:21Z"
+      lastUpdateTime: "2021-09-01T19:55:24Z"
+      message: ReplicaSet "products-7b794f7965" has successfully progressed.
+      reason: NewReplicaSetAvailable
+      status: "True"
+      type: Progressing
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+    updatedReplicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T20:01:57Z"
+    generation: 1
+    labels:
+      app: frontend
+      pod-template-hash: 77d556db49
+    name: frontend-77d556db49
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: frontend
+      uid: d1776cda-380c-489c-956d-572394e6ee80
+    resourceVersion: "7339"
+    uid: dcb0d0f9-c39b-48c1-b6ce-77058d691948
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: frontend
+        pod-template-hash: 77d556db49
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: frontend
+          pod-template-hash: 77d556db49
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/frontend:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: frontend
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T19:45:41Z"
+    generation: 2
+    labels:
+      app: monolith
+      pod-template-hash: 76f9d9c4b5
+    name: monolith-76f9d9c4b5
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: monolith
+      uid: db29ad60-0f1f-4de2-bc5f-0ef366844a11
+    resourceVersion: "4803"
+    uid: 4fecba40-8c66-49ff-bc6d-f0f7193983fd
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: monolith
+        pod-template-hash: 76f9d9c4b5
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: monolith
+          pod-template-hash: 76f9d9c4b5
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: monolith
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "2"
+    creationTimestamp: "2021-09-01T19:53:12Z"
+    generation: 2
+    labels:
+      app: monolith
+      pod-template-hash: 786fbdc796
+    name: monolith-786fbdc796
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: monolith
+      uid: db29ad60-0f1f-4de2-bc5f-0ef366844a11
+    resourceVersion: "6773"
+    uid: 05520f98-12af-43c6-a06d-3b5353c6f536
+  spec:
+    replicas: 0
+    selector:
+      matchLabels:
+        app: monolith
+        pod-template-hash: 786fbdc796
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: monolith
+          pod-template-hash: 786fbdc796
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:2.0.0
+          imagePullPolicy: IfNotPresent
+          name: monolith
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    observedGeneration: 2
+    replicas: 0
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "3"
+    creationTimestamp: "2021-09-01T19:59:44Z"
+    generation: 1
+    labels:
+      app: monolith
+      pod-template-hash: bd6479b7
+    name: monolith-bd6479b7
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: monolith
+      uid: db29ad60-0f1f-4de2-bc5f-0ef366844a11
+    resourceVersion: "6765"
+    uid: 82095f68-3986-47a5-b6cd-fff0582cecd8
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: monolith
+        pod-template-hash: bd6479b7
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: monolith
+          pod-template-hash: bd6479b7
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/monolith:3.0.0
+          imagePullPolicy: IfNotPresent
+          name: monolith
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T19:47:54Z"
+    generation: 1
+    labels:
+      app: orders
+      pod-template-hash: 785878bbf6
+    name: orders-785878bbf6
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: orders
+      uid: 8577e10e-35bb-4380-9f1d-36dc63cb669f
+    resourceVersion: "3045"
+    uid: 6babbaf7-40fc-4d14-a984-fed53cef0480
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: orders
+        pod-template-hash: 785878bbf6
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: orders
+          pod-template-hash: 785878bbf6
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/orders:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: orders
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+    creationTimestamp: "2021-09-01T19:55:21Z"
+    generation: 1
+    labels:
+      app: products
+      pod-template-hash: 7b794f7965
+    name: products-7b794f7965
+    namespace: default
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: products
+      uid: 98fb65dc-9738-4609-996d-851af06128c8
+    resourceVersion: "5347"
+    uid: 889eb630-570f-415a-bbb2-bc3c357a240c
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: products
+        pod-template-hash: 7b794f7965
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          app: products
+          pod-template-hash: 7b794f7965
+      spec:
+        containers:
+        - image: gcr.io/qwiklabs-gcp-01-64f200010379/products:1.0.0
+          imagePullPolicy: IfNotPresent
+          name: products
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+        dnsPolicy: ClusterFirst
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext: {}
+        terminationGracePeriodSeconds: 30
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+kind: List
+metadata:
+  resourceVersion: ""
+  selfLink: ""

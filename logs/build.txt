@@ -1,0 +1,77 @@
+
+> frontend@0.1.0 prebuild
+> npm run build:monolith
+
+
+> frontend@0.1.0 build:monolith
+> env-cmd -f .env.monolith react-scripts build
+
+Creating an optimized production build...
+Browserslist: caniuse-lite is outdated. Please run:
+npx browserslist@latest --update-db
+
+Why you should do it regularly:
+https://github.com/browserslist/browserslist#browsers-data-updating
+Compiled successfully.
+
+File sizes after gzip:
+
+  79.08 KB  build/static/js/2.99058a84.chunk.js
+  1.99 KB   build/static/js/main.c4e7aaac.chunk.js
+  770 B     build/static/js/runtime-main.c8a21426.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+
+> frontend@0.1.0 postbuild:monolith
+> node scripts/post-build.js ./build ../monolith/public
+
+Deleting stale folder: ../monolith/public
+Deleted stale destination folder: ../monolith/public
+Copying files from ./build to ../monolith/public
+Copied ./build to ../monolith/public successfully!
+
+> frontend@0.1.0 build
+> react-scripts build
+
+Creating an optimized production build...
+Compiled successfully.
+
+File sizes after gzip:
+
+  79.08 KB         build/static/js/2.99058a84.chunk.js
+  2.01 KB (+19 B)  build/static/js/main.1385b471.chunk.js
+  770 B            build/static/js/runtime-main.c8a21426.js
+
+The project was built assuming it is hosted at /.
+You can control this with the homepage field in your package.json.
+
+The build folder is ready to be deployed.
+You may serve it with a static server:
+
+  npm install -g serve
+  serve -s build
+
+Find out more about deployment here:
+
+  bit.ly/CRA-deploy
+
+
+> frontend@0.1.0 postbuild
+> node scripts/post-build.js ./build ../microservices/src/frontend/public
+
+Deleting stale folder: ../microservices/src/frontend/public
+Deleted stale destination folder: ../microservices/src/frontend/public
+Copying files from ./build to ../microservices/src/frontend/public
+Copied ./build to ../microservices/src/frontend/public successfully!
